@@ -5,9 +5,8 @@ import Form from '../../components/form';
 import Input from '../../components/input';
 import FormGroup from '../../components/form-group';
 
-import {LOGIN_ERROR_TEXT,
-        USER_DATA,
-        LOGIN_FORM_FIELDS_CONFIG} from '../../constants/constants';
+import { LOGIN_ERROR_TEXT,
+        LOGIN_FORM_FIELDS_CONFIG } from '../../constants/auth';
 
 
 const Login = ({isAuthorized, setAuthorization}) => {
@@ -15,7 +14,8 @@ const Login = ({isAuthorized, setAuthorization}) => {
   const [password, setPassword] = useState('');
 
   const submitForm = () => {
-    setAuthorization(email !== USER_DATA.email || password !== USER_DATA.password);
+    const userData = { email, password };
+    setAuthorization(userData);
   };
 
   return (

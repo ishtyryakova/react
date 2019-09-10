@@ -1,0 +1,5 @@
+const AUTH_SUCCESS = 'AUTH_SUCCESS';
+const AUTH_ERROR = 'AUTH_ERROR';
+
+
+export { AUTH_SUCCESS, AUTH_ERROR };
