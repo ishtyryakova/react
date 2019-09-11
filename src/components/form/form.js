@@ -8,7 +8,7 @@ const Form = (props) => {
       <form className="col-md-6 auth-form">
         {props.render(props)}
       </form>
-      {!props.isValid && <p>{props.errorText}</p>}
+      {!props.isValid && <div className="ml-3">{props.errorText}</div>}
     </React.Fragment>
   )
 };
